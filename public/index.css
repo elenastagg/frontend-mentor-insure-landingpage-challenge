@@ -1,9 +1,7 @@
 /* Headings*/
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
-/* font-family: 'DM Serif Display', serif; font weight 400*/
 /*body*/
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@200;400;700&display=swap");
-/* font-family: 'Karla', sans-serif; size 16px font-weight: 400, 700 */
 
 :root {
   --dark-violet: hsl(256, 26%, 20%);
@@ -18,13 +16,19 @@ body {
   width: 100%;
 }
 #nav {
-  display: grid;
-  grid-template-columns: 60% 10% 5% 5% 12% 8%;
+  display: flex;
   background-color: white;
   text-align: center;
   position: relative;
   z-index: 3;
-  padding: 1.25rem 0 1.25rem 0;
+  padding: 1.25rem 0 1.25rem 10.5rem;
+}
+
+.nav-menu {
+  position: absolute;
+  right: 0;
+  display: flex;
+  padding-right: 10.5rem;
 }
 .nav-item {
   margin: 0;
@@ -56,9 +60,7 @@ button {
   background: linear-gradient(180deg, var(--dark-violet) 62%, white 38%);
   z-index: -1;
 }
-.header-logo {
-  padding-left: 10.5rem;
-}
+
 .violet-area {
   background: var(--dark-violet);
   color: var(--very-light-gray);
@@ -107,10 +109,12 @@ h1 {
   grid-template-rows: 10% 30% 60%;
   width: 77%;
   margin: auto;
+  margin-bottom: 8rem;
 }
 hr.gray-break {
   border-top: 0.075rem solid var(--grayish-blue);
   width: 15%;
+  margin-top: -3rem;
 }
 .usp-section {
   grid-row-start: 3;
@@ -119,7 +123,7 @@ hr.gray-break {
 }
 h1.content-title {
   color: var(--very-dark-violet);
-  margin: 1rem 0 3rem 0;
+  margin: -1rem 0 3.5rem 0;
 }
 .usp {
   padding: 1rem;
@@ -135,10 +139,72 @@ h2.usp-title {
 #how-we-work-section {
   width: 77%;
   margin: auto;
-  padding: 4rem 0;
   background-image: url("images/bg-pattern-how-we-work-desktop.svg");
   background-position: right top;
   background-repeat: no-repeat;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 65% 35%;
+  margin-bottom: 11rem;
+}
+.how-we-work-title {
+  font-size: 3.5rem;
+  padding: 4rem 9rem 3.5rem 5rem;
+  line-height: 3.5rem;
+}
+.how-we-work-button {
+  margin: auto;
+}
+
+footer {
+  background-color: var(--very-light-gray);
+  display: grid;
+  background-image: url("images/bg-pattern-footer-desktop.svg");
+  background-position: left top;
+  background-repeat: no-repeat;
+}
+
+.footer-header {
+  grid-row-start: 1;
+  grid-row-end: span 1;
+  padding: 3.5rem 0;
+  border-bottom: 1px solid var(--very-dark-violet);
+  width: 77%;
+  margin: auto;
+}
+
+.footer-logo {
+  position: absolute;
+  left: 0;
+  padding-left: 10.5rem;
+}
+
+.social-logos {
+  position: absolute;
+  right: 0;
+  padding-right: 10.5rem;
+}
+
+.attribution {
+  grid-row-start: 3;
+  grid-row-end: span 1;
+  text-align: center;
+  color: var(--dark-grayish-violet);
+  padding: 2rem;
+}
+a {
+  color: var(--dark-grayish-violet);
+}
+
+.footer-menu {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 100%;
+  margin: auto;
+  width: 77%;
+  text-transform: uppercase;
+}
+
+h5 {
+  color: var(--dark-grayish-violet);
+  padding: 1rem 0;
 }
