@@ -38,18 +38,32 @@ body {
   font-size: 14px;
   font-weight: 600;
 }
+.nav-item:hover {
+  color: var(--dark-violet);
+}
 button {
   background: transparent;
-  padding: 0.5rem 1.75rem;
+  padding: 0.5rem 1.5rem;
   border: 2px solid;
+  text-transform: uppercase;
+  font-size: 13px;
+  outline: none;
 }
 .white-border-button {
   border-color: white;
   color: white;
 }
+.white-border-button:hover {
+  background-color: white;
+  color: var(--dark-violet);
+}
 .violet-border-button {
   border-color: var(--very-dark-violet);
   color: var(--very-dark-violet);
+}
+.violet-border-button:hover {
+  background-color: var(--dark-violet);
+  color: white;
 }
 
 #header-section {
@@ -183,7 +197,10 @@ footer {
   right: 0;
   padding-right: 10.5rem;
 }
-
+.social-logo:hover {
+  filter: brightness(0) saturate(100%) invert(10%) sepia(8%) saturate(4016%)
+    hue-rotate(215deg) brightness(99%) contrast(85%);
+}
 .attribution {
   grid-row-start: 3;
   grid-row-end: span 1;
@@ -193,6 +210,9 @@ footer {
 }
 a {
   color: var(--dark-grayish-violet);
+}
+a:hover {
+  color: var(--dark-violet);
 }
 
 .footer-menu {
@@ -207,4 +227,8 @@ a {
 h5 {
   color: var(--dark-grayish-violet);
   padding: 1rem 0;
+}
+
+.footer-item:hover {
+  text-decoration: underline;
 }
